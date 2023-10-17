@@ -13,9 +13,45 @@ const rl = readline.createInterface({
 
 const pigLatin = (word) => {
 
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  const vowelEnding = 'yay'
+
+  let result = "";
+
+  word = word.toLowerCase().trim()
+
+  if (vowels.includes(word[0])) {
+
+    return result = word + vowelEnding;
+
+  } else {
+
+    let consonants = '';
+    let i = 0;
+
+    while (i < word.length && !vowels.includes(word[i])) {
+      consonants += word[i];
+      i++;
+
+    }
+
+    result = word.slice(i) + consonants + 'ay';
+    // Couldn't find out how to split it properly so I had to go with slice. I think the book was trying to trick me lol.
+    return result;
+
+    
+
+  }
+}
+
+
+
+
+  
   // Your code here
 
-}
+
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js

@@ -10,6 +10,16 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+function translate() {
+
+  const userInput = document.getElementById("user-input").value
+
+  const translatedText = pigLatin(userInput)
+
+  document.getElementById("display-element").innerHTML = translatedText
+}
+
+
 
 const pigLatin = (word) => {
 

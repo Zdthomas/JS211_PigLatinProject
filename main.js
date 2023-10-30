@@ -2,6 +2,10 @@
 
 // brings in the assert module for unit testing
 const assert = require('assert');
+
+// Line 4 of code keeps ruining my code no matter what I do. I give up on this....,..,.
+
+
 // brings in the readline module to access the command line
 const readline = require('readline');
 // use the readline module to print out to the command line
@@ -9,15 +13,6 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
-function translate() {
-
-  const userInput = document.getElementById("user-input").value
-
-  const translatedText = pigLatin(userInput)
-
-  document.getElementById("display-element").innerHTML = translatedText
-}
 
 
 
@@ -57,7 +52,7 @@ const pigLatin = (word) => {
 
 
 
-
+export { pigLatin };
   
   // Your code here
 
